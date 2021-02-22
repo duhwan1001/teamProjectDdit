@@ -1,12 +1,15 @@
 package controller;
 
+import service.CustomerService;
+import service.UserService;
 import util.ScanUtil;
 import util.View;
 
 
 public class Controller {
 	public static void main(String[] args) {
-		
+	
+		new Controller().start();
 	}
 	
 	public void addCart(){} // 장바구니 추가
@@ -18,7 +21,8 @@ public class Controller {
 	} 
 	
 	private void start() {
-
+		home();
+		
 	}
 
 	private int home() {
@@ -31,7 +35,7 @@ public class Controller {
 		int input = ScanUtil.nextInt();
 		
 		switch (input) {
-			case 1: return View.LOGIN;
+			case 1: loginSelect();
 			case 2: return View.JOIN;
 			case 0:
 				System.out.println("프로그램이 종료되었습니다.");
@@ -40,4 +44,50 @@ public class Controller {
 		
 		return View.HOME;
 	}
+	
+	private void loginSelect() {
+		int input = ScanUtil.nextInt();
+		switch(input) {
+		case 1: admin();
+		case 2: customer();
+		case 3: rest();
+		case 4: rider();
+		case 5: riders();
+		}
+	}
+	
+	private void regSelect() {
+		int input = ScanUtil.nextInt();
+		switch(input) {
+		case 1: regadmin();
+		case 2: regcustomer();
+		case 3: regrest();
+		case 4: regrider();
+		case 5: regrider();
+		}
+	}
+	
+	private void rider() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	private void rest() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	private void customer() {
+		// TODO Auto-generated method stub
+		
+	}
+	
+	private void riders() {
+		// TODO Auto-generated method stub
+		
+	}
+
+
+	
+	
 }
