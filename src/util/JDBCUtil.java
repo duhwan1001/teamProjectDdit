@@ -29,9 +29,9 @@ public class JDBCUtil {
 		return instance;
 	}
 	
-	String url = "jdbc:oracle:thin:@localhost:1521:xe";
-	String user = "pc21";
-	String password = "java";
+	String url = "jdbc:oracle:thin:@192.168.43.41:1521:xe";
+	String user = "jinny";
+	String password = "jinny";
 	
 	Connection con = null;
 	PreparedStatement ps = null;
@@ -120,6 +120,7 @@ public class JDBCUtil {
 			rs = ps.executeQuery();
 			
 			ResultSetMetaData metaData = rs.getMetaData();
+			
 			int columnCount = metaData.getColumnCount();
 			
 			while(rs.next()){
@@ -216,7 +217,7 @@ public class JDBCUtil {
 		
 		return result;
 	}
-	
+
 }
 
 
